@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Personalisierte Geschenkideen</title>
-    <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🎁 Personalisierte Geschenkideen | MakeBuy.de</title>
+  <meta name="description" content="Finde einzigartige personalisierte Geschenke für Geburtstag, Männer, Frauen und besondere Anlässe. Jetzt entdecken auf MakeBuy.de!">
+  <meta name="keywords" content="personalisierte Geschenke, geschenkideen, geburtstagsgeschenk, geschenk männer, geschenke zum 60 geburtstag, geburtstag geschenk ideen für männer">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #fdf9f6;
+      color: #333;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 1.8rem;
+      color: #b33b3b;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+    }
+    .gift {
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background-color: #b33b3b;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background-color: #8a2c2c;
+    }
+  </style>
 </head>
 <body>
-    <h1>🎁 Personalisierte Geschenkideen</h1>
-    <p>Finde das perfekte Geschenk für jeden Anlass!</p>
+  <h1>🎁 Personalisierte Geschenkideen</h1>
+  <p>Finde das perfekte Geschenk für jeden Anlass!</p>
 
-    <div id="gift-list"></div>
+  <div class="gift">
+    <h2>🎨 Personalisierte Tasse mit Namen</h2>
+    <p>Eine individuelle Tasse für deinen Lieblingsmenschen.</p>
+    <a href="https://www.makebuy.de" class="btn">Jetzt ansehen</a>
+  </div>
 
-    <footer>
-        <p>Mehr <a href="https://www.makebuy.de" target="_blank">personalisierte Geschenke</a> findest du auf MakeBuy.de – dein Shop für einzigartige Geschenkideen mit Herz.</p>
-    </footer>
+  <div class="gift">
+    <h2>🛏️ Geburtstagskissen mit Foto</h2>
+    <p>Ein weiches Kissen mit deinem Lieblingsfoto – ideal zum Geburtstag.</p>
+    <a href="https://www.makebuy.de" class="btn">Jetzt ansehen</a>
+  </div>
 
-    <script>
-        fetch('geschenke.json')
-        .then(response => response.json())
-        .then(data => {
-            const container = document.getElementById('gift-list');
-            data.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'gift-card';
-                div.innerHTML = `<h3>${item.titel}</h3><p>${item.beschreibung}</p><a href="${item.link}" target="_blank">Jetzt ansehen</a>`;
-                container.appendChild(div);
-            });
-        });
-    </script>
+  <p>Mehr personalisierte Geschenke findest du auf <a href="https://www.makebuy.de" target="_blank">MakeBuy.de</a> – dein Shop für einzigartige Geschenkideen mit Herz.</p>
 </body>
 </html>
