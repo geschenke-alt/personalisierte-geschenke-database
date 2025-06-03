@@ -1,0 +1,6 @@
+body { font-family: sans-serif; padding: 2em; background: #f9f9f9; }
+h1 { color: #333; }
+.gift-card { background: white; border-radius: 10px; padding: 1em; margin: 1em 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+.gift-card h3 { margin: 0.2em 0; }
+.gift-card a { color: #0077cc; text-decoration: none; }
+footer { margin-top: 3em; font-size: 0.9em; }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalisierte Geschenkideen</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1>🎁 Personalisierte Geschenkideen</h1>
+    <p>Finde das perfekte Geschenk für jeden Anlass!</p>
+
+    <div id="gift-list"></div>
+
+    <footer>
+        <p>Mehr <a href="https://www.makebuy.de" target="_blank">personalisierte Geschenke</a> findest du auf MakeBuy.de – dein Shop für einzigartige Geschenkideen mit Herz.</p>
+    </footer>
+
+    <script>
+        fetch('geschenke.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('gift-list');
+            data.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'gift-card';
+                div.innerHTML = `<h3>${item.titel}</h3><p>${item.beschreibung}</p><a href="${item.link}" target="_blank">Jetzt ansehen</a>`;
+                container.appendChild(div);
+            });
+        });
+    </script>
+</body>
+</html>
